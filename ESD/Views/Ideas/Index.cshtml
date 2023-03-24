@@ -1,0 +1,109 @@
+﻿@model IEnumerable<ESD.Models.Idea>
+
+@{
+    ViewData["Title"] = "Index";
+    var users = (List<Microsoft.AspNetCore.Identity.IdentityUser>)ViewData["users"];
+    var currentUser = (Microsoft.AspNetCore.Identity.IdentityUser)ViewData["currentUser"];
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="TermConfirm">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.FilePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datetime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAnomynous)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.LikeS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DislikeS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViewS)
+            </th>
+            <th>
+                User email
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Topic)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.FilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datetime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAnomynous)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.LikeS) <br />
+                <a asp-action="React" asp-route-id="@item.Id" asp-route-reactT="@true">Like</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DislikeS) <br />
+                <a asp-action="React" asp-route-id="@item.Id" asp-route-reactT="@false">Dislike</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewS)
+            </td>
+            <td>
+                    @if (!item.IsAnomynous)
+                    {
+                        @users.Where(u => u.Id == item.UserId).FirstOrDefault().Email;
+                    }
+                    else
+                    {
+                                    <p>Anomynous</p>
+                    }
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Category.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Topic.Id)
+            </td>*@
+            <td>
+                @if (DateTime.Now < item.Topic.CloseDate_1 && users.Where(u => u.Id == item.UserId).FirstOrDefault() == currentUser)
+                {
+                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                } |
+                @if (DateTime.Now < item.Topic.CloseDate_2)
+                {
+                     <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                } |
+                @if (DateTime.Now < item.Topic.CloseDate_1 && users.Where(u => u.Id == item.UserId).FirstOrDefault() == currentUser)
+                {
+                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
