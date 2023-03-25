@@ -17,7 +17,7 @@ namespace ESD.Services.EmailService
         public void SendEmail(EmailDio request)
         {
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse("napoleon.bednar60@ethereal.email"));
+            email.From.Add(MailboxAddress.Parse("pearline.batz20@ethereal.email"));
             email.To.Add(MailboxAddress.Parse(request.To));
             email.Subject = request.Subject;
             email.Body = new TextPart(TextFormat.Html) { Text = request.Body };

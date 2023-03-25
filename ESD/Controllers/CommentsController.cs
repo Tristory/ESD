@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ESD.Data;
 using ESD.Models;
 using Microsoft.AspNetCore.Identity;
+using ESD.Services.EmailService;
 
 namespace ESD.Controllers
 {
@@ -15,11 +16,13 @@ namespace ESD.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly IEmailService _emailService;
 
-        public CommentsController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public CommentsController(ApplicationDbContext context, UserManager<IdentityUser> userManager, IEmailService emailService)
         {
             _context = context;
             _userManager = userManager;
+            _emailService = emailService;
         }
 
         // GET: Comments
@@ -80,6 +83,8 @@ namespace ESD.Controllers
                 comment.UserId = user.Id;
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
+
+                SendEmail(CurrentIdea);
 
                 TempData["CurrentIdea"] = CurrentIdea;
 
@@ -182,6 +187,19 @@ namespace ESD.Controllers
         private bool CommentExists(int id)
         {
           return (_context.Comments?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        public void SendEmail(int? id)
+        {
+            var currentIdea = _context.Ideas.FirstOrDefault(c => c.Id == id);
+            var ideaUser = _context.Users.FirstOrDefault(c => c.Id == currentIdea.UserId);
+            EmailDio emailDio = new EmailDio();
+
+            emailDio.To = ideaUser.Email;
+            emailDio.Subject = "Comment notification.";
+            emailDio.Body = "There is someone comment on your ideas.";
+
+            _emailService.SendEmail(emailDio);
         }
     }
 }

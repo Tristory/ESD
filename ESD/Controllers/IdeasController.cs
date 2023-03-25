@@ -107,7 +107,7 @@ namespace ESD.Controllers
                 _context.Add(idea);
                 await _context.SaveChangesAsync();
 
-                SendEmail(user.Email, "Idea created", "Good Job!");
+                //SendEmail(user.Id);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -239,7 +239,7 @@ namespace ESD.Controllers
             {
                 try
                 {
-                    SendEmail(user.Email, "Idea Edited", "Change your mind?");
+                    //SendEmail(user.Email, "Idea Edited", "Change your mind?");
                     _context.Update(idea);
                     await _context.SaveChangesAsync();
                 }
@@ -345,13 +345,18 @@ namespace ESD.Controllers
             return false;
         }
 
-        public void SendEmail(string Email, string subject, string body)
+        public void SendEmail(string UserID)
         {
+            var ideaMaker = _context.Users.FirstOrDefault(i => i.Id == UserID);
+            var makerDepartment = _context.DepartmentUsers.FirstOrDefault(m => m.UserId == ideaMaker.Id);
+
+            //Department head finder
+
             EmailDio emailDio = new EmailDio();
 
-            emailDio.To = Email;
-            emailDio.Subject = subject;
-            emailDio.Body = body;
+            emailDio.To = ideaMaker.Email;
+            emailDio.Subject = "Idea created notification.";
+            emailDio.Body = "There is someone from your department created a idea.";
 
             _emailService.SendEmail(emailDio);
         }
