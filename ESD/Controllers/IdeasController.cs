@@ -347,14 +347,19 @@ namespace ESD.Controllers
 
         public void SendEmail(string UserID)
         {
-            var ideaMaker = _context.Users.FirstOrDefault(i => i.Id == UserID);
-            var makerDepartment = _context.DepartmentUsers.FirstOrDefault(m => m.UserId == ideaMaker.Id);
+            //var ideaMaker = _context.Users.FirstOrDefault(i => i.Id == UserID);
+            var departmentUser = _context.DepartmentUsers.FirstOrDefault(d => d.UserId == UserID);
+            var makerDepartment = _context.Departments.FirstOrDefault(m => m.Id == departmentUser.DepartmentId);
 
-            //Department head finder
+            string departmentHeadRole = makerDepartment.Name + " Head";
+
+            var role = _context.Roles.FirstOrDefault(r => r.Name == departmentHeadRole);
+            var userRole = _context.UserRoles.FirstOrDefault(u => u.RoleId == role.Id);
+            var headUser = _context.Users.FirstOrDefault(h => h.Id == userRole.UserId);
 
             EmailDio emailDio = new EmailDio();
 
-            emailDio.To = ideaMaker.Email;
+            emailDio.To = headUser.Email;
             emailDio.Subject = "Idea created notification.";
             emailDio.Body = "There is someone from your department created a idea.";
 
