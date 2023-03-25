@@ -61,7 +61,7 @@ namespace ESD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Department department)
         {
-            if (ModelState.IsValid)
+            //if (ModelState.IsValid)
             {
                 IdentityRole newRole = new IdentityRole();
                 newRole.Name = department.Name + " Head";

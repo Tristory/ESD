@@ -351,6 +351,8 @@ namespace ESD.Controllers
             var departmentUser = _context.DepartmentUsers.FirstOrDefault(d => d.UserId == UserID);
             var makerDepartment = _context.Departments.FirstOrDefault(m => m.Id == departmentUser.DepartmentId);
 
+            makerDepartment.IdeasS += 1;
+
             string departmentHeadRole = makerDepartment.Name + " Head";
 
             var role = _context.Roles.FirstOrDefault(r => r.Name == departmentHeadRole);
