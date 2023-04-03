@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "FileUploadPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int? Id = (int?)ViewData["id"];
+}
+
+<h1>File Upload Page</h1>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <form method="post" asp-controller="FileUpload" asp-action="SaveFile" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" id="File1" name="File1"/>
+                    <input type="hidden" id="Id" name="Id">@Id</input>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <button type="submit">Save File</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+

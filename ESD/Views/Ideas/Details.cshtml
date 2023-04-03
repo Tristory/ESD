@@ -74,10 +74,12 @@
     </dl>
 </div>
 <div>
+    <a asp-controller="FileUpload" asp-action="FileDownloadPage" asp-route-filePath=@Model.FilePath asp-route-ID="@Model?.Id">Download uploaded File</a>
+</div>
+<div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
-
 <div>
     <a asp-controller="Comments" asp-action="Create" asp-route-CurrentIdea="@Model?.Id">Add comments</a>
 </div>

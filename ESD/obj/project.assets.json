@@ -2211,6 +2211,22 @@
           }
         }
       },
+      "SharpZipLib.NETStandard/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/ICSharpCode.SharpZipLib.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/ICSharpCode.SharpZipLib.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6761,6 +6777,24 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "SharpZipLib.NETStandard/1.0.7": {
+      "sha512": "mYKPizF2CY32RQB8FITYy0e30gVgItFA63SFquruaxq+votwL1T+yOfssK10v4enBcxklr8ks48hS1emw5TTXg==",
+      "type": "package",
+      "path": "sharpziplib.netstandard/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ICSharpCode.SharpZipLib.dll",
+        "lib/net45/ICSharpCode.SharpZipLib.pdb",
+        "lib/net45/ICSharpCode.SharpZipLib.xml",
+        "lib/netstandard1.3/ICSharpCode.SharpZipLib.deps.json",
+        "lib/netstandard1.3/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard1.3/ICSharpCode.SharpZipLib.pdb",
+        "lib/netstandard1.3/ICSharpCode.SharpZipLib.xml",
+        "sharpziplib.netstandard.1.0.7.nupkg.sha512",
+        "sharpziplib.netstandard.nuspec"
+      ]
+    },
     "System.AppContext/4.3.0": {
       "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
       "type": "package",
@@ -10574,23 +10608,24 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.15",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13",
+      "SharpZipLib.NETStandard >= 1.0.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj",
+      "projectUniqueName": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
       "projectName": "ESD",
-      "projectPath": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\obj\\",
+      "projectPath": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "E:\\visual studio lab\\ESD\\ESD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10645,6 +10680,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[6.0.13, )"
+          },
+          "SharpZipLib.NETStandard": {
+            "target": "Package",
+            "version": "[1.0.7, )"
           }
         },
         "imports": [

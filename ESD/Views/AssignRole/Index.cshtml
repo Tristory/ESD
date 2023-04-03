@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ESD.Models.AllUserViewModel>
+@{
+    ViewData["Title"] = "Index";
+    var roles = (List<Microsoft.AspNetCore.Identity.IdentityRole>)ViewData["roles"];
+}
+
+<h1>List of Users</h1>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Role</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.User.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.User.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Role)
+                </td>
+                <td>
+                    <a asp-controller="AssignRole" asp-action="Edit" asp-route-userId="@item.User.Id">Hi it me le button</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

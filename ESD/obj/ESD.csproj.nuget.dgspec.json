@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj": {}
+    "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj": {}
   },
   "projects": {
-    "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj": {
+    "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj",
+        "projectUniqueName": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
         "projectName": "ESD",
-        "projectPath": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\obj\\",
+        "projectPath": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "E:\\visual studio lab\\ESD\\ESD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,6 +69,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.13, )"
+            },
+            "SharpZipLib.NETStandard": {
+              "target": "Package",
+              "version": "[1.0.7, )"
             }
           },
           "imports": [
