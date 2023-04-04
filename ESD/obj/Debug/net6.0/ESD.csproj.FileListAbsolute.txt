@@ -565,3 +565,4 @@ E:\visual studio lab\ESD\ESD\obj\Debug\net6.0\ESD.pdb
 E:\visual studio lab\ESD\ESD\obj\Debug\net6.0\ESD.genruntimeconfig.cache
 E:\visual studio lab\ESD\ESD\obj\Debug\net6.0\ref\ESD.dll
 E:\visual studio lab\ESD\ESD\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
+E:\Learning stuff\Enterprise software development\ESD\ESD\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
