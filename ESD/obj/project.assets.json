@@ -10613,19 +10613,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
+      "projectUniqueName": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj",
       "projectName": "ESD",
-      "projectPath": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\visual studio lab\\ESD\\ESD\\obj\\",
+      "projectPath": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\ESD.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\Learning stuff\\Enterprise software development\\ESD\\ESD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
