@@ -54,7 +54,6 @@ namespace ESD.Controllers
             return View(comment);
         }
 
-        // GET: Comments/Create
         public IActionResult Create(int? CurrentIdea)
         {
             if (CurrentIdea == null)
@@ -67,9 +66,6 @@ namespace ESD.Controllers
             return View();
         }
 
-        // POST: Comments/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Text,IdeaId,UserId")] Comment comment)

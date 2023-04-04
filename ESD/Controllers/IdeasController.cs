@@ -81,18 +81,14 @@ namespace ESD.Controllers
 
             _context.Add(view);
         }
-
-        // GET: Ideas/Create
+                
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id");
-            ViewData["TopicId"] = new SelectList(_context.Topics, "Id", "Id");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
+            ViewData["TopicId"] = new SelectList(_context.Topics, "Id", "Name");
             return View();
         }
-
-        // POST: Ideas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+                
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Text,FilePath,Datetime,IsAnomynous,LikeS,DislikeS,ViewS,UserId,CategoryId,TopicId")] Idea idea)
@@ -101,13 +97,14 @@ namespace ESD.Controllers
 
             //if (ModelState.IsValid)
             {
+                idea.FilePath = String.Empty;
                 idea.UserId = user.Id;
                 idea.DateTime = DateTime.Now;
 
-                _context.Add(idea);
-                await _context.SaveChangesAsync();
-
                 //SendEmail(user.Id);
+
+                _context.Add(idea);
+                await _context.SaveChangesAsync();                         
 
                 return RedirectToAction(nameof(Index));
             }
@@ -221,9 +218,6 @@ namespace ESD.Controllers
             return View(idea);
         }
 
-        // POST: Ideas/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Text,FilePath,Datetime,IsAnomynous,LikeS,DislikeS,ViewS,UserId,CategoryId,TopicId")] Idea idea)
@@ -261,7 +255,6 @@ namespace ESD.Controllers
             return View(idea);
         }
 
-        // GET: Ideas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Ideas == null)
@@ -281,7 +274,6 @@ namespace ESD.Controllers
             return View(idea);
         }
 
-        // POST: Ideas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
