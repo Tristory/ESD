@@ -64,7 +64,9 @@ namespace ESD.Controllers
             //if (ModelState.IsValid)
             {
                 IdentityRole newRole = new IdentityRole();
-                newRole.Name = department.Name + " Head";
+                string departmentHeadRole = department.Name + " Head";
+                newRole.Name = departmentHeadRole;
+                newRole.NormalizedName = departmentHeadRole;
 
                 _context.Add(department);
                 _context.Add(newRole);
