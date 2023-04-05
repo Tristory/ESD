@@ -17,11 +17,11 @@
                 <input asp-for="Text" class="form-control" />
                 <span asp-validation-for="Text" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="FilePath" class="control-label"></label>
                 <input asp-for="FilePath" class="form-control" />
                 <span asp-validation-for="FilePath" class="text-danger"></span>
-            </div>
+            </div>*@
             @*<div class="form-group">
                 <label asp-for="Datetime" class="control-label"></label>
                 <input asp-for="Datetime" class="form-control" />
@@ -32,7 +32,7 @@
                     <input class="form-check-input" asp-for="IsAnomynous" /> @Html.DisplayNameFor(model => model.IsAnomynous)
                 </label>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="LikeS" class="control-label"></label>
                 <input asp-for="LikeS" class="form-control" />
                 <span asp-validation-for="LikeS" class="text-danger"></span>
@@ -46,12 +46,12 @@
                 <label asp-for="ViewS" class="control-label"></label>
                 <input asp-for="ViewS" class="form-control" />
                 <span asp-validation-for="ViewS" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            </div>*@
+            @*<div class="form-group">
                 <label asp-for="UserId" class="control-label"></label>
                 <input asp-for="UserId" class="form-control" />
                 <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
                 <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>

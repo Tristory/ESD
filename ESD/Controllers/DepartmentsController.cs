@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ESD.Data;
 using ESD.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace ESD.Controllers
 {
     public class DepartmentsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        //private readonly RoleManager<IdentityRole> _roleManager;
 
         public DepartmentsController(ApplicationDbContext context)
         {
             _context = context;
+            //_roleManager = roleManager;
         }
 
         // GET: Departments
@@ -58,9 +61,14 @@ namespace ESD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Department department)
         {
-            if (ModelState.IsValid)
+            //if (ModelState.IsValid)
             {
+                IdentityRole newRole = new IdentityRole();
+                newRole.Name = department.Name + " Head";
+
                 _context.Add(department);
+                _context.Add(newRole);
+                
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
