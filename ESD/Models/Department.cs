@@ -11,6 +11,8 @@ namespace ESD.Models
                 
         public string Name { get; set; }
 
+        public int IdeasS { get; set; }
+
         public Department()
         { }
     }

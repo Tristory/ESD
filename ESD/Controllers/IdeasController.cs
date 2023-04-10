@@ -81,18 +81,14 @@ namespace ESD.Controllers
 
             _context.Add(view);
         }
-
-        // GET: Ideas/Create
+                
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id");
-            ViewData["TopicId"] = new SelectList(_context.Topics, "Id", "Id");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
+            ViewData["TopicId"] = new SelectList(_context.Topics, "Id", "Name");
             return View();
         }
-
-        // POST: Ideas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+                
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Text,FilePath,Datetime,IsAnomynous,LikeS,DislikeS,ViewS,UserId,CategoryId,TopicId")] Idea idea)
@@ -101,13 +97,14 @@ namespace ESD.Controllers
 
             //if (ModelState.IsValid)
             {
+                idea.FilePath = String.Empty;
                 idea.UserId = user.Id;
                 idea.DateTime = DateTime.Now;
 
-                _context.Add(idea);
-                await _context.SaveChangesAsync();
+                //SendEmail(user.Id);
 
-                SendEmail(user.Email, "Idea created", "Good Job!");
+                _context.Add(idea);
+                await _context.SaveChangesAsync();                         
 
                 return RedirectToAction(nameof(Index));
             }
@@ -221,9 +218,6 @@ namespace ESD.Controllers
             return View(idea);
         }
 
-        // POST: Ideas/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Text,FilePath,Datetime,IsAnomynous,LikeS,DislikeS,ViewS,UserId,CategoryId,TopicId")] Idea idea)
@@ -239,7 +233,7 @@ namespace ESD.Controllers
             {
                 try
                 {
-                    SendEmail(user.Email, "Idea Edited", "Change your mind?");
+                    //SendEmail(user.Email, "Idea Edited", "Change your mind?");
                     _context.Update(idea);
                     await _context.SaveChangesAsync();
                 }
@@ -261,7 +255,6 @@ namespace ESD.Controllers
             return View(idea);
         }
 
-        // GET: Ideas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Ideas == null)
@@ -281,7 +274,6 @@ namespace ESD.Controllers
             return View(idea);
         }
 
-        // POST: Ideas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -345,13 +337,25 @@ namespace ESD.Controllers
             return false;
         }
 
-        public void SendEmail(string Email, string subject, string body)
+        public void SendEmail(string UserID)
         {
+            //var ideaMaker = _context.Users.FirstOrDefault(i => i.Id == UserID);
+            var departmentUser = _context.DepartmentUsers.FirstOrDefault(d => d.UserId == UserID);
+            var makerDepartment = _context.Departments.FirstOrDefault(m => m.Id == departmentUser.DepartmentId);
+
+            makerDepartment.IdeasS += 1;
+
+            string departmentHeadRole = makerDepartment.Name + " Head";
+
+            var role = _context.Roles.FirstOrDefault(r => r.Name == departmentHeadRole);
+            var userRole = _context.UserRoles.FirstOrDefault(u => u.RoleId == role.Id);
+            var headUser = _context.Users.FirstOrDefault(h => h.Id == userRole.UserId);
+
             EmailDio emailDio = new EmailDio();
 
-            emailDio.To = Email;
-            emailDio.Subject = subject;
-            emailDio.Body = body;
+            emailDio.To = headUser.Email;
+            emailDio.Subject = "Idea created notification.";
+            emailDio.Body = "There is someone from your department created a idea.";
 
             _emailService.SendEmail(emailDio);
         }
