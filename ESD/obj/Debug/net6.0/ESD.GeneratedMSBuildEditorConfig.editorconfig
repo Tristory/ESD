@@ -9,181 +9,181 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ESD
 build_property.RootNamespace = ESD
-build_property.ProjectDir = E:\visual studio lab\ESD\ESD\
+build_property.ProjectDir = D:\tai ve\ESD-complete\ESD\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\visual studio lab\ESD\ESD
+build_property.MSBuildProjectDirectory = D:\tai ve\ESD-complete\ESD
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/visual studio lab/ESD/ESD/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/tai ve/ESD-complete/ESD/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/AssignRole/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/AssignRole/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzaWduUm9sZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/AssignRole/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/AssignRole/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzaWduUm9sZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Categories/Create.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Categories/Delete.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Categories/Details.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Categories/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Categories/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Comments/Create.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Comments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Comments/Delete.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Comments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Comments/Details.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Comments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Comments/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Comments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Comments/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Comments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Departments/Create.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Departments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Departments/Delete.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Departments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Departments/Details.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Departments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Departments/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Departments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Departments/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Departments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/DepartmentUsers/Create.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/DepartmentUsers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFVzZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/DepartmentUsers/Delete.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/DepartmentUsers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFVzZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/DepartmentUsers/Details.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/DepartmentUsers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFVzZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/DepartmentUsers/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/DepartmentUsers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFVzZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/DepartmentUsers/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/DepartmentUsers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFVzZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/FileUpload/FileUploadPage.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/FileUpload/FileUploadPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsZVVwbG9hZFxGaWxlVXBsb2FkUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Home/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Home/Privacy.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Ideas/Create.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Ideas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Ideas/Delete.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Ideas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Ideas/Details.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Ideas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Ideas/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Ideas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Ideas/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Ideas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Ideas/TermConfirm.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Ideas/TermConfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWRlYXNcVGVybUNvbmZpcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Shared/Error.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Shared/_LoginPartial.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Topics/Create.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Topics/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Topics/Delete.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Topics/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Topics/Details.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Topics/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Topics/Edit.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Topics/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Topics/Index.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Topics/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9waWNzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/_ViewImports.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/_ViewStart.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/visual studio lab/ESD/ESD/Views/Shared/_Layout.cshtml]
+[D:/tai ve/ESD-complete/ESD/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2enenqugyu

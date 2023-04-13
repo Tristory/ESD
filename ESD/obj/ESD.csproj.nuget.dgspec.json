@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj": {}
+    "D:\\tai ve\\ESD-complete\\ESD\\ESD.csproj": {}
   },
   "projects": {
-    "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj": {
+    "D:\\tai ve\\ESD-complete\\ESD\\ESD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
+        "projectUniqueName": "D:\\tai ve\\ESD-complete\\ESD\\ESD.csproj",
         "projectName": "ESD",
-        "projectPath": "E:\\visual studio lab\\ESD\\ESD\\ESD.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\visual studio lab\\ESD\\ESD\\obj\\",
+        "projectPath": "D:\\tai ve\\ESD-complete\\ESD\\ESD.csproj",
+        "packagesPath": "C:\\Users\\longb\\.nuget\\packages\\",
+        "outputPath": "D:\\tai ve\\ESD-complete\\ESD\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\longb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
