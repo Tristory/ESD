@@ -9,6 +9,7 @@ using ESD.Data;
 using ESD.Models;
 using Microsoft.AspNetCore.Identity;
 using ESD.Services.EmailService;
+using X.PagedList;
 
 namespace ESD.Controllers
 {
@@ -26,7 +27,24 @@ namespace ESD.Controllers
         }
 
         // GET: Ideas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? page)
+        {
+            ViewBag.CurrentSort = sortOrder;
+            var currentUser = await _userManager.GetUserAsync(HttpContext.User);
+            var users = _userManager.Users.ToList();
+            var applicationDbContext = _context.Ideas.Include(i => i.Category).Include(i => i.Topic);
+
+            ViewData["users"] = users;
+            ViewData["currentUser"] = currentUser;
+
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+
+            return View(applicationDbContext.ToPagedList(pageNumber, pageSize));
+        }
+
+        // GET: Ideas/Search
+        public async Task<IActionResult> Search()
         {
             var currentUser = await _userManager.GetUserAsync(HttpContext.User);
             var users = _userManager.Users.ToList();
@@ -36,6 +54,34 @@ namespace ESD.Controllers
 
             var applicationDbContext = _context.Ideas.Include(i => i.Category).Include(i => i.Topic);
             return View(await applicationDbContext.ToListAsync());
+        }
+
+        // POST: Ideas/SearchResults
+        public async Task<IActionResult> SearchResults(string SearchPhrase, string sortOrder, string currentFilter, string searchString, int? page)
+        {
+            var currentUser = await _userManager.GetUserAsync(HttpContext.User);
+            var users = _userManager.Users.ToList();
+
+            ViewData["users"] = users;
+            ViewData["currentUser"] = currentUser;
+
+            var applicationDbContext = _context.Ideas.Include(i => i.Category).Include(i => i.Topic);
+
+            if (SearchPhrase != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                SearchPhrase = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = SearchPhrase;
+
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+
+            return View("Index", applicationDbContext.Where(j => j.Text.Contains(SearchPhrase)).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Ideas/Details/5

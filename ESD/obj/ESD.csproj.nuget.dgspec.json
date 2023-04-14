@@ -78,6 +78,10 @@
             "SharpZipLib.NETStandard": {
               "target": "Package",
               "version": "[1.0.7, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[9.0.0-prerelease, )"
             }
           },
           "imports": [

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gUQC/2ZFGOruFi5Md6Xr2oZmjuGf8fSvRVn4/wnfbyARiRR76fRYA0pgWlbZD0t+91PaiAc5DMSYOPc+FMBVKw==",
+  "dgSpecHash": "Dvfq4FW5Vq3NDVVt73HraZZJDe/j+ObloAWOW3Q8PLV397oKmPcncuEyvdgDz+fzRlJqEF/lXVcVl1Lo6aTnzg==",
   "success": true,
   "projectFilePath": "D:\\tai ve\\ESD-complete\\ESD\\ESD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\longb\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\longb\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\longb\\.nuget\\packages\\mailkit\\3.6.0\\mailkit.3.6.0.nupkg.sha512",
     "C:\\Users\\longb\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\longb\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
@@ -188,7 +189,9 @@
     "C:\\Users\\longb\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\longb\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\longb\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\longb\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\longb\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\longb\\.nuget\\packages\\x.pagedlist\\9.0.0-prerelease\\x.pagedlist.9.0.0-prerelease.nupkg.sha512",
+    "C:\\Users\\longb\\.nuget\\packages\\x.pagedlist.mvc.core\\9.0.0-prerelease\\x.pagedlist.mvc.core.9.0.0-prerelease.nupkg.sha512"
   ],
   "logs": []
 }
