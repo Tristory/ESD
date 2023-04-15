@@ -80,9 +80,6 @@
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
-<div>
-    <a asp-controller="Comments" asp-action="Create" asp-route-CurrentIdea="@Model?.Id">Add comments</a>
-</div>
 
 <table class="table">
     <thead>
@@ -120,3 +117,8 @@
         }
     </tbody>
 </table>
+
+<form asp-controller="Comments" asp-action="Create" asp-route-CurrentIdea="@Model?.Id" class="d-flex">
+    <input asp-for="Text" class="form-control" value="" />
+    <input type="submit" value="Sent" class="btn btn-primary" />
+</form>

@@ -1,8 +1,47 @@
-﻿@{
+﻿@model IPagedList<ESD.Models.Idea>
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+@{
     ViewData["Title"] = "Home Page";
+}
+@{
+    ViewBag.Title = "Ideas";
+}
+
+@{
+    var IdeaC = (List<Idea>)ViewData["Ideas"];
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome Ma Dude</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Top View</h1>
+
+    <table id="customers">
+        <thead>
+            <tr>
+                <th>
+                    @*@Html.ActionLink("Text", "Index", new { sortOrder = ViewBag.TextSortParm })*@
+                    Text
+                </th>
+                <th>
+                    @Html.ActionLink("ViewS", "Index", new { sortOrder = ViewBag.ViewSSortParm })
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Text)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ViewS)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>
