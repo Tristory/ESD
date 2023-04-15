@@ -101,7 +101,7 @@ namespace ESD.Controllers
                 idea.UserId = user.Id;
                 idea.DateTime = DateTime.Now;
 
-                //SendEmail(user.Id);
+                SendEmail(user.Id);
 
                 _context.Add(idea);
                 await _context.SaveChangesAsync();                         
