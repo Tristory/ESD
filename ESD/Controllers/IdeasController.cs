@@ -10,6 +10,7 @@ using ESD.Models;
 using Microsoft.AspNetCore.Identity;
 using ESD.Services.EmailService;
 using X.PagedList;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ESD.Controllers
 {
@@ -27,6 +28,7 @@ namespace ESD.Controllers
         }
 
         // GET: Ideas
+        [Authorize]
         public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
@@ -85,6 +87,7 @@ namespace ESD.Controllers
         }
 
         // GET: Ideas/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Ideas == null)
@@ -127,7 +130,8 @@ namespace ESD.Controllers
 
             _context.Add(view);
         }
-                
+
+        [Authorize]
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
@@ -136,6 +140,7 @@ namespace ESD.Controllers
         }
                 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Text,FilePath,Datetime,IsAnomynous,LikeS,DislikeS,ViewS,UserId,CategoryId,TopicId")] Idea idea)
         {
@@ -245,6 +250,7 @@ namespace ESD.Controllers
         }
 
         // GET: Ideas/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Ideas == null)
@@ -265,6 +271,7 @@ namespace ESD.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Text,FilePath,Datetime,IsAnomynous,LikeS,DislikeS,ViewS,UserId,CategoryId,TopicId")] Idea idea)
         {
@@ -301,6 +308,7 @@ namespace ESD.Controllers
             return View(idea);
         }
 
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Ideas == null)

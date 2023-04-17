@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ESD.Data;
 using ESD.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace ESD.Controllers
 {
@@ -20,6 +22,7 @@ namespace ESD.Controllers
         }
 
         // GET: DepartmentUsers
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Index()
         {
               return _context.DepartmentUsers != null ? 
@@ -28,6 +31,7 @@ namespace ESD.Controllers
         }
 
         // GET: DepartmentUsers/Details/5
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.DepartmentUsers == null)
@@ -46,6 +50,7 @@ namespace ESD.Controllers
         }
 
         // GET: DepartmentUsers/Create
+        [Authorize(Roles = "Admin,QA Manager")]
         public IActionResult Create()
         {
             ViewData["UserId"] = new SelectList(_context.Users, "Id", "Email");
@@ -57,6 +62,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin,QA Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserId,DepartmentId")] DepartmentUser departmentUser)
         {
@@ -71,6 +77,7 @@ namespace ESD.Controllers
         }
 
         // GET: DepartmentUsers/Edit/5
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.DepartmentUsers == null)
@@ -94,6 +101,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin,QA Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,UserId,DepartmentId")] DepartmentUser departmentUser)
         {
@@ -127,6 +135,7 @@ namespace ESD.Controllers
         }
 
         // GET: DepartmentUsers/Delete/5
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.DepartmentUsers == null)

@@ -26,27 +26,38 @@
                             <a class="nav-link" style="color: red;" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: red;" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" style="color: red;" asp-area="" asp-controller="Topics" asp-action="Index">Topic</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: red;" asp-area="" asp-controller="Ideas" asp-action="Index">Idea</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: red;" asp-area="" asp-controller="AssignRole" asp-action="Index">Assign Role</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" style="color: red;" asp-area="" asp-controller="Comments" asp-action="Index">Comment</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: red;" asp-area="" asp-controller="Departments" asp-action="Index">Department</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: red;" asp-area="" asp-controller="DepartmentUsers" asp-action="Index">Department User</a>
-                        </li>
-                        
+                        @if (User.IsInRole("Admin") || User.IsInRole("QA Manager"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: red;" asp-area="" asp-controller="Departments" asp-action="Index">Department</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Admin") || User.IsInRole("QA Manager"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: red;" asp-area="" asp-controller="DepartmentUsers" asp-action="Index">Department User</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Admin") || User.IsInRole("QA Manager"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: red;" asp-area="" asp-controller="Categories" asp-action="Index">Category</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: red;" asp-area="" asp-controller="AssignRole" asp-action="Index">Assign Role</a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

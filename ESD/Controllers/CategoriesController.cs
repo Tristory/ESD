@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ESD.Data;
 using ESD.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ESD.Controllers
 {
@@ -19,6 +20,7 @@ namespace ESD.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Categories
         public async Task<IActionResult> Index()
         {
@@ -45,6 +47,7 @@ namespace ESD.Controllers
             return View(category);
         }
 
+        [Authorize(Roles = "Admin,QA Manager")]
         // GET: Categories/Create
         public IActionResult Create()
         {
@@ -55,6 +58,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin,QA Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Category category)
         {
@@ -67,6 +71,7 @@ namespace ESD.Controllers
             return View(category);
         }
 
+        [Authorize(Roles = "Admin,QA Manager")]
         // GET: Categories/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -87,6 +92,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin,QA Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Category category)
         {
@@ -118,6 +124,7 @@ namespace ESD.Controllers
             return View(category);
         }
 
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Categories == null)

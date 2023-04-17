@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ESD.Data;
 using ESD.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ESD.Controllers
 {
@@ -22,6 +23,7 @@ namespace ESD.Controllers
             //_roleManager = roleManager;
         }
 
+        [Authorize (Roles = "Admin,QA Manager")]
         // GET: Departments
         public async Task<IActionResult> Index()
         {
@@ -31,6 +33,7 @@ namespace ESD.Controllers
         }
 
         // GET: Departments/Details/5
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Departments == null)
@@ -49,6 +52,7 @@ namespace ESD.Controllers
         }
 
         // GET: Departments/Create
+        [Authorize(Roles = "Admin,QA Manager")]
         public IActionResult Create()
         {
             return View();
@@ -58,6 +62,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin,QA Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Department department)
         {
@@ -78,6 +83,7 @@ namespace ESD.Controllers
         }
 
         // GET: Departments/Edit/5
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Departments == null)
@@ -97,6 +103,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin,QA Manager")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Department department)
         {
@@ -129,6 +136,7 @@ namespace ESD.Controllers
         }
 
         // GET: Departments/Delete/5
+        [Authorize(Roles = "Admin,QA Manager")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Departments == null)

@@ -1,7 +1,9 @@
 ﻿using ESD.Data;
 using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Zip;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace ESD.Controllers
 {
@@ -13,6 +15,7 @@ namespace ESD.Controllers
             this.context = context;
         }
 
+        [Authorize]
         public IActionResult FileUploadPage(int? Id)
         {
             TempData["id"] = Id;
@@ -20,6 +23,7 @@ namespace ESD.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin,QA Manager")]
         public IActionResult FileDownloadPage(string filePath, int? Id)
         {
             string[] filePaths = Directory.GetFiles(filePath);
@@ -69,6 +73,7 @@ namespace ESD.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> SaveFile(IFormFile File1)
         {
             //int? tempId = (int?)TempData["id"];

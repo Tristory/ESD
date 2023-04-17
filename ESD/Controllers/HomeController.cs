@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Drawing.Printing;
 using X.PagedList;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ESD.Controllers
 {
@@ -21,6 +22,7 @@ namespace ESD.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
 
@@ -58,6 +60,7 @@ namespace ESD.Controllers
             return View(students.ToPagedList(pageNumber, pageSize));           
         }
 
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

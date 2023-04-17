@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ESD.Data;
 using ESD.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace ESD.Controllers
 {
@@ -19,6 +21,7 @@ namespace ESD.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Topics
         public async Task<IActionResult> Index()
         {
@@ -28,6 +31,7 @@ namespace ESD.Controllers
         }
 
         // GET: Topics/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Topics == null)
@@ -45,6 +49,7 @@ namespace ESD.Controllers
             return View(topic);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Topics/Create
         public IActionResult Create()
         {
@@ -55,6 +60,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,CloseDate_1,CloseDate_2")] Topic topic)
         {
@@ -68,6 +74,7 @@ namespace ESD.Controllers
         }
 
         // GET: Topics/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Topics == null)
@@ -87,6 +94,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CloseDate_1,CloseDate_2")] Topic topic)
         {
@@ -119,6 +127,7 @@ namespace ESD.Controllers
         }
 
         // GET: Topics/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Topics == null)

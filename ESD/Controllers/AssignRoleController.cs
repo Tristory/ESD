@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration.UserSecrets;
 using System.ComponentModel.DataAnnotations;
 using ESD.Data;
 using ESD.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ESD.Controllers
 {
@@ -24,7 +25,7 @@ namespace ESD.Controllers
             this.context = context;
         }
 
-
+        [Authorize (Roles ="Admin")]
         public IActionResult Index()
         {
             List<AllUserViewModel> modelList = new List<AllUserViewModel>();
@@ -54,7 +55,7 @@ namespace ESD.Controllers
             return View();
         }
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(string userId)
         {
             UserRole ur = new UserRole();
@@ -67,6 +68,7 @@ namespace ESD.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit([Bind("UserID,RoleID")] UserRole UR)
         {

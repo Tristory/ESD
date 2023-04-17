@@ -853,3 +853,6 @@ D:\tai ve\ESD-complete\ESD\obj\Debug\net6.0\ref\ESD.dll
 D:\tai ve\ESD-complete\ESD\bin\Debug\net6.0\JetBrains.Annotations.dll
 D:\tai ve\ESD-complete\ESD\bin\Debug\net6.0\X.PagedList.dll
 D:\tai ve\ESD-complete\ESD\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+E:\visual studio lab\ESD\ESD\bin\Debug\net6.0\JetBrains.Annotations.dll
+E:\visual studio lab\ESD\ESD\bin\Debug\net6.0\X.PagedList.dll
+E:\visual studio lab\ESD\ESD\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll

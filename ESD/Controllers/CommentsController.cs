@@ -9,6 +9,7 @@ using ESD.Data;
 using ESD.Models;
 using Microsoft.AspNetCore.Identity;
 using ESD.Services.EmailService;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ESD.Controllers
 {
@@ -26,6 +27,7 @@ namespace ESD.Controllers
         }
 
         // GET: Comments
+        [Authorize]
         public async Task<IActionResult> Index()
         {
               return _context.Comments != null ? 
@@ -34,6 +36,7 @@ namespace ESD.Controllers
         }
 
         // GET: Comments/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Comments == null)
@@ -54,6 +57,7 @@ namespace ESD.Controllers
             return View(comment);
         }
 
+        [Authorize]
         public IActionResult Create(int? CurrentIdea)
         {
             if (CurrentIdea == null)
@@ -67,6 +71,7 @@ namespace ESD.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Text,IdeaId,UserId")] Comment comment)
         {
@@ -90,6 +95,7 @@ namespace ESD.Controllers
         }
 
         // GET: Comments/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Comments == null)
@@ -109,6 +115,7 @@ namespace ESD.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Text,IdeaId,UserId")] Comment comment)
         {
@@ -144,6 +151,7 @@ namespace ESD.Controllers
         }
 
         // GET: Comments/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Comments == null)
